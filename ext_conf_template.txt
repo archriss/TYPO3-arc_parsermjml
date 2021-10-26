@@ -1,0 +1,11 @@
+# cat=basic/enable; type=string; label=Api uri of MJML
+auth.baseUri = https://api.mjml.io/v1/
+
+# cat=basic/enable; type=string; label=Application Id of MJML api
+auth.appId =
+
+# cat=basic/enable; type=string; label=Public key of MJML api
+auth.publicKey =
+
+# cat=basic/enable; type=string; label=Secret key of MJML api
+auth.secretKey =

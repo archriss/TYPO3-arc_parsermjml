@@ -1,0 +1,25 @@
+{
+    "name": "archriss/arc-parsermjml",
+    "description": "Convert simple spliced mjml file into generated html using style.mjml file.",
+    "type": "typo3-cms-extension",
+    "require": {
+        "typo3/cms-core": "^10.4 || ^11.5"
+    },
+    "license": "GPL-2.0",
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "arc_parsermjml"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Archriss\\ArcParsermjml\\": "Classes/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Christophe Monard",
+            "email": "cmonard@archriss.com"
+        }
+    ]
+}

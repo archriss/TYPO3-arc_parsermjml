@@ -1,0 +1,76 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:spaceless>
+    <h1><f:translate key="module.title"/></h1>
+    <f:be.infobox
+            title="{f:translate(key: 'module.{infoboxTitle}.title')}"
+            message="{f:translate(key: 'module.{infoboxTitle}.message', arguments: '{count: \'{f:count(subject: files)}\'}')}"
+            state="{infoboxState}"
+    />
+    <f:if condition="{showForm}">
+        <f:form action="convert" class="form-inline form-inline-spaced" objectName="dto">
+            <div class="row">
+                <div class="form-group">
+                    <label for="styleField">
+                        <f:translate key="module.form.styleSelect" /> <code class="required">champ obligatoire</code>
+                    </label>
+                    <div class="input-group">
+                        <f:form.select
+                                class="form-control form-control-adapt"
+                                id="styleField"
+                                options="{files}"
+                                optionLabelField="name"
+                                optionValueField="identifier"
+                                prependOptionLabel=""
+                                prependOptionValue=""
+                                property="style"
+                                required="true"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="overrideCheck">
+                        <f:translate key="module.form.override" />
+                    </label>
+                    <div class="input-group">
+                        <f:form.checkbox id="overrideCheck" property="override" value="1" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <f:form.submit value="Convertir les fichiers" class="btn btn-default btn-sm" />
+                </div>
+            </div>
+        </f:form>
+        <f:be.infobox
+                title="{f:translate(key: 'module.info.template.title')}"
+                message="{f:translate(key: 'module.info.template.message') -> f:format.nl2br() -> f:format.raw()}"
+                state="1"
+        />
+    </f:if>
+    <f:if condition="{errorDatas}">
+        <f:for each="{errorDatas}" key="file" as="errors">
+            <f:variable name="errorTitle" value="{file}" />
+            <f:for each="{errors}" as="error" iteration="errorIterator">
+                <f:if condition="{errorIterator.isFirst}">
+                    <f:then>
+                        <f:variable name="errorMessages" value="{0: error.formattedMessage}" />
+                    </f:then>
+                    <f:else>
+                        <v:iterator.push subject="{errorMessages}" add="{error.formattedMessage}" as="errorMessages" />
+                    </f:else>
+                </f:if>
+            </f:for>
+            <f:be.infobox
+                    title="{errorTitle}"
+                    message="{errorMessages -> v:iterator.implode(glue: '{v:const(name: \'PHP_EOL\')}') -> f:format.nl2br() -> f:format.raw()}"
+                    state="2"
+            />
+        </f:for>
+    </f:if>
+</f:spaceless>
+</html>

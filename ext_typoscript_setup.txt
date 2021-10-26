@@ -1,0 +1,12 @@
+plugin.tx_arcparsermjml {
+    view {
+        templateRootPaths.0 = EXT:arc_parsermjml/Resources/Private/Templates/
+        partialRootPaths.0 = EXT:arc_parsermjml/Resources/Private/Partials/
+        layoutRootPaths.0 = EXT:arc_parsermjml/Resources/Private/Layouts/
+    }
+    features {
+        skipDefaultArguments = 0
+    }
+    settings {
+    }
+}
