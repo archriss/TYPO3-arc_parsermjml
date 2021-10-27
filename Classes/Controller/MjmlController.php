@@ -258,10 +258,12 @@ EOT;
      */
     protected function extractContentFor(File $templateFile, $content = '')
     {
-        return $this->markerService->getSubpart(
+        $content = $this->markerService->getSubpart(
             $content,
             $this->getSubpartIdentifier($templateFile->getNameWithoutExtension())
         );
+        $content = str_replace('<!-- htmlmin:ignore -->', '', $content);
+        return trim($content);
     }
 
     /**
