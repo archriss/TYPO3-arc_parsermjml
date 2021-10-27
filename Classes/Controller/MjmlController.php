@@ -112,7 +112,7 @@ class MjmlController extends ActionController
             } else {
                 if ($this->folder->getFileCount() > 0) {
                     if (!is_null($success)) {
-                        if ($success) {
+                        if (!$success) {
                             $key = 'error.api';
                             $state = 1;
                         } else {
