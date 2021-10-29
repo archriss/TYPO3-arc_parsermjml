@@ -1,0 +1,28 @@
+<mj-raw>
+<!-- htmlmin:ignore -->
+<html xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:arcProject="http://typo3.org/ns/Archriss/ArcProject/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:spaceless>
+    <f:if condition="{data.tx_mask_image.0}">
+    <!-- htmlmin:ignore -->
+</mj-raw>
+
+<!-- Branding -->
+<mj-section mj-class="section section--banner">
+    <mj-column>
+        <mj-image href="{f:uri.typolink(parameter: data.tx_mask_link, absolute: '1')}"
+                  src="{f:uri.image(image: data.tx_mask_image.0, absolute: '1')}"
+                  width="238px" height="53px" alt="Musée Granet - Aix-en-Provence"></mj-image>
+    </mj-column>
+</mj-section>
+
+<mj-raw>
+<!-- htmlmin:ignore -->
+        <f:render partial="Spacer" arguments="{space: 20}" />
+    </f:if>
+</f:spaceless>
+</html>
+<!-- htmlmin:ignore -->
+</mj-raw>

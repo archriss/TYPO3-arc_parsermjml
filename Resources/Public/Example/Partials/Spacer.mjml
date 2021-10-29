@@ -1,0 +1,19 @@
+<mj-raw>
+<!-- htmlmin:ignore -->
+<html xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:arcProject="http://typo3.org/ns/Archriss/ArcProject/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:spaceless>
+    <!-- htmlmin:ignore -->
+</mj-raw>
+
+<!-- Remember to add {spacer} variable instead of the hardcoded value in final template -->
+<mj-section padding-bottom="20px"></mj-section>
+
+<mj-raw>
+<!-- htmlmin:ignore -->
+</f:spaceless>
+</html>
+<!-- htmlmin:ignore -->
+</mj-raw>

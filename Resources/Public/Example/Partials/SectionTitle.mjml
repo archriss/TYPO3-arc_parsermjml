@@ -1,0 +1,73 @@
+<mj-raw>
+<!-- htmlmin:ignore -->
+<html xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:arcProject="http://typo3.org/ns/Archriss/ArcProject/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:spaceless>
+    <!-- htmlmin:ignore -->
+</mj-raw>
+
+<mj-raw>
+<!-- htmlmin:ignore -->
+<f:section name="noImage">
+    <f:if condition="{title}">
+<!-- htmlmin:ignore -->
+</mj-raw>
+<mj-section mj-class="section__header">
+    <mj-column>
+        <mj-raw><!-- htmlmin:ignore --><f:if condition="{title}"><!-- htmlmin:ignore --></mj-raw>
+        <mj-text mj-class="section__title">{title}</mj-text>
+        <mj-raw><!-- htmlmin:ignore --></f:if><!-- htmlmin:ignore --></mj-raw>
+    </mj-column>
+</mj-section>
+<mj-raw>
+<!-- htmlmin:ignore -->
+    </f:if>
+</f:section>
+<!-- htmlmin:ignore -->
+</mj-raw>
+
+<mj-raw>
+<!-- htmlmin:ignore -->
+<f:section name="image">
+<!-- htmlmin:ignore -->
+</mj-raw>
+<!-- Section title -->
+<mj-section mj-class="section__header">
+    <mj-group>
+        <mj-column>
+            <mj-image mj-class="section__icon" src="{f:uri.image(image: image.0, absolute: '1')}" alt=""></mj-image>
+        </mj-column>
+        <mj-column>
+            <mj-raw><!-- htmlmin:ignore --><f:if condition="{title}"><!-- htmlmin:ignore --></mj-raw>
+            <mj-text mj-class="section__title section__title--icon">{title}</mj-text>
+            <mj-raw><!-- htmlmin:ignore --></f:if><!-- htmlmin:ignore --></mj-raw>
+        </mj-column>
+    </mj-group>
+</mj-section>
+<mj-raw>
+<!-- htmlmin:ignore -->
+</f:section>
+<!-- htmlmin:ignore -->
+</mj-raw>
+
+<mj-raw>
+<!-- htmlmin:ignore -->
+<f:if condition="{image}">
+    <f:then>
+        <f:render section="image" arguments="{_all}" />
+    </f:then>
+    <f:else>
+        <f:render section="noImage" arguments="{_all}" />
+    </f:else>
+</f:if>
+<!-- htmlmin:ignore -->
+</mj-raw>
+
+<mj-raw>
+<!-- htmlmin:ignore -->
+</f:spaceless>
+</html>
+<!-- htmlmin:ignore -->
+</mj-raw>

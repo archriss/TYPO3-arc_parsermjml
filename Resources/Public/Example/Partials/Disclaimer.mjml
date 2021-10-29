@@ -1,0 +1,30 @@
+<mj-raw>
+<!-- htmlmin:ignore -->
+<html xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:arcProject="http://typo3.org/ns/Archriss/ArcProject/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:spaceless>
+    <!-- htmlmin:ignore -->
+</mj-raw>
+
+    <!-- Disclaimer -->
+    <mj-section>
+        <mj-column mj-class="disclaimer">
+            <mj-raw><!-- htmlmin:ignore --><f:if condition="{data.media}"><!-- htmlmin:ignore --></mj-raw>
+            <mj-image mj-class="disclaimer__logo" href="#" src="{f:uri.image(image: data.media.0, absolute: '1')}"></mj-image>
+            <mj-raw><!-- htmlmin:ignore --></f:if><!-- htmlmin:ignore --></mj-raw>
+            <mj-text mj-class="disclaimer__line">Conformément à l'article 34 de la loi Informatique et Liberté du 6 janvier 1978, vous disposez d'un droit d'accès, de modification, de rectification et de suppression des données vous concernant.</mj-text>
+            <mj-raw><!-- htmlmin:ignore --><f:if condition="{data.tx_arcprojet_url_page_detail}"><!-- htmlmin:ignore --></mj-raw>
+            <mj-text mj-class="disclaimer__line">Si vous souhaitez vous désinscrire, merci d'utiliser le lien suivant :</mj-text>
+            <mj-button mj-class="disclaimer__link" href="{f:uri.typolink(parameter: data.tx_arcprojet_url_page_detail, absolute: '1')}">Se désabonner</mj-button>
+            <mj-raw><!-- htmlmin:ignore --></f:if><!-- htmlmin:ignore --></mj-raw>
+        </mj-column>
+    </mj-section>
+
+<mj-raw>
+<!-- htmlmin:ignore -->
+</f:spaceless>
+</html>
+<!-- htmlmin:ignore -->
+</mj-raw>

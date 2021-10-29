@@ -16,3 +16,9 @@ Warning : do not handle mj-include
 - Select the style file and convert (existing files can be overrided)
 
 Remember to request appId + public/secret key on mjml.io
+
+# Example
+
+There's some example in Resources/Public/Example directory.
+
+Interesting files for convertion are located in Partials folder.

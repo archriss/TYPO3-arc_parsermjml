@@ -1,0 +1,30 @@
+<mj-raw>
+<!-- htmlmin:ignore -->
+<html xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:arcProject="http://typo3.org/ns/Archriss/ArcProject/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:spaceless>
+  <!-- htmlmin:ignore -->
+</mj-raw>
+
+<!-- Metas -->
+<mj-section mj-class="metas">
+  <mj-group>
+    <mj-column>
+      <mj-raw><!-- htmlmin:ignore --><f:if condition="{data.tx_arcproject_date}"><!-- htmlmin:ignore --></mj-raw>
+        <mj-text mj-class="metas__info">{data.tx_arcproject_date -> f:format.date(format: 'd F Y')}</mj-text>
+      <mj-raw><!-- htmlmin:ignore --></f:if><!-- htmlmin:ignore --></mj-raw>
+    </mj-column>
+    <mj-column>
+      <mj-button mj-class="metas__cta" href="{f:uri.typolink(parameter: data.uid, absolute: '1')}">Voir dans le navigateur</mj-button>
+    </mj-column>
+  </mj-group>
+</mj-section>
+
+<mj-raw>
+<!-- htmlmin:ignore -->
+</f:spaceless>
+</html>
+<!-- htmlmin:ignore -->
+</mj-raw>

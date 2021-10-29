@@ -1,0 +1,72 @@
+<!-- Default breakpoint -->
+<mj-breakpoint width="480px" />
+<mj-attributes>
+  
+  <!-- Default attributes for components -->
+  <mj-all font-family="Helvetica, Arial, sans-serif" />
+  <mj-body background-color="#edeef0" />
+  <mj-wrapper padding="0px" />
+  <mj-section padding="0px" />
+  <mj-image padding="0px" />
+  <mj-text color="#292527" font-size="16px" font-weight="400" />
+  <mj-button border-radius="0px" />
+    
+  <!-- Global CTA component -->
+  <mj-class name="cta" inner-padding="15px 20px" font-weight="700" text-transform="uppercase" />
+  <mj-class name="cta--primary" font-size="14px" color="#ffffff" background-color="#a7834b" />
+  <mj-class name="cta--secondary" border="1px solid #a7834b" font-size="14px" color="#a7834b" background-color="#ffffff" />
+  
+  <!-- Metas component -->  
+  <mj-class name="metas" background-color="#eeeeee" />
+  <mj-class name="metas__info" padding="10px" font-size="14px" color="#666466" align="left" />
+  <mj-class name="metas__cta" padding="10px" inner-padding="0px" font-size="14px" color="#666466" align="right" text-decoration="underline" background-color="transparent" />
+  
+  <!-- Branding component -->
+  <mj-class name="branding" padding="10px 10px 0px 10px" vertical-align="middle" />
+  <mj-class name="branding--alt" padding-bottom="10px" />
+  <mj-class name="branding__logo" width="75px" height="75px" align="left" />
+  <mj-class name="branding__title" padding="4px 0px" font-size="14px" font-weight="700" align="right" />
+  <mj-class name="branding__info" padding="4px 0px" font-size="12px" align="right" />
+    
+  <!-- Section component -->
+  <mj-class name="section" background-color="#ffffff" />
+  <mj-class name="section--border" padding="30px" />
+  <mj-class name="section--banner" padding="20px 0px" color="#ffffff" background-color="#a7834b" />
+  <mj-class name="section__header" padding-bottom="25px" />
+  <mj-class name="section__icon" width="65px" height="45px" padding-right="6px" align="right" />
+  <mj-class name="section__title" padding-bottom="0px" font-size="24px" font-weight="700" align="center" />
+  <mj-class name="section__title--icon" padding-left="6px" align="left" />
+  <mj-class name="section__subheader" />
+  <mj-class name="section__subtitle" padding="0px" font-weight="700" text-transform="uppercase" />
+  <mj-class name="section__cta" width="100%" padding="0px" font-size="14px" color="#ffffff" background-color="#666466" />  
+  
+  <!-- Card component -->
+  <mj-class name="card" padding-bottom="10px" border="1px solid #cdc5c1" />
+  <mj-class name="card--alt" padding-top="10px" />
+  <mj-class name="card__title" font-size="19px" font-weight="700" align="center" />
+  <mj-class name="card__cover" padding-bottom="10px" />
+  <mj-class name="card__cover--alt" padding-top="10px" padding-right="25px" padding-left="25px" />
+  <mj-class name="card__date" padding-bottom="0px" font-size="14px" color="#666466" align="center" />
+  <mj-class name="card__summary" line-height="1.5" align="center" />
+  <mj-class name="card__tags" padding-top="0px" font-size="14px" color="#a7834b" align="center" />
+  <mj-class name="card__cta-primary" width="70%" padding-right="0px" padding-left="0px" />
+  <mj-class name="card__cta-secondary" width="70%" padding-top="0px" padding-right="0px" padding-left="0px" />
+  
+  <!-- Info component -->
+	<mj-class name="info" padding-right="10px" />
+  <mj-class name="info__title" padding="20px 0px 10px 0px" line-height="1.3" font-weight="700" />
+  <mj-class name="info__line" padding="0px 0px 2px 0px" line-height="1.3" />
+  <mj-class name="info__line--important" font-weight="700" />
+  <mj-class name="info__cta" padding="20px 0px 0px 0px" align="left" />
+  
+  <!-- Social component -->      
+  <mj-class name="social" width="35px" height="35px" padding="10px 0px" />
+  
+  <!-- Disclaimer component -->
+  <mj-class name="disclaimer__logo" width="148px" height="85px" padding="20px 25px" />
+  <mj-class name="disclaimer__line" padding-bottom="0px" font-size="12px" line-height="1.5" font-style="italic" color="#9f9b90" align="center" />
+  <mj-class name="disclaimer__link" font-size="14px" color="#292527" text-decoration="underline" background-color="#f4efeb" />
+   
+</mj-attributes>
+<!-- Styles for pure HTML -->
+<mj-style> @media only screen and (max-width:479px) { .mobile-centered div { text-align: center !important; } .mobile-centered table { margin: auto !important; } } </mj-style>

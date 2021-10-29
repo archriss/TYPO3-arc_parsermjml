@@ -1,0 +1,25 @@
+<mj-raw>
+<!-- htmlmin:ignore -->
+<html xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:arcProject="http://typo3.org/ns/Archriss/ArcProject/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:spaceless>
+    <f:if condition="{data.tx_mask_link}">
+        <!-- htmlmin:ignore -->
+</mj-raw>
+
+    <!-- Section CTA -->
+    <mj-section>
+      <mj-column>
+        <mj-button mj-class="cta section__cta" href="{f:uri.typolink(parameter: data.tx_mask_link, absolute: '1')}">{data.tx_mask_textlink}</mj-button>
+      </mj-column>
+    </mj-section>
+
+<mj-raw>
+<!-- htmlmin:ignore -->
+    </f:if>
+</f:spaceless>
+</html>
+<!-- htmlmin:ignore -->
+</mj-raw>
