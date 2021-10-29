@@ -9,14 +9,56 @@
     <!-- htmlmin:ignore -->
 </mj-raw>
 
+<mj-raw>
+    <!-- htmlmin:ignore -->
+<f:section name="banner">
+    <!-- htmlmin:ignore -->
+</mj-raw>
 <!-- Branding -->
 <mj-section mj-class="section section--banner">
     <mj-column>
         <mj-image href="{f:uri.typolink(parameter: data.tx_mask_link, absolute: '1')}"
                   src="{f:uri.image(image: data.tx_mask_image.0, absolute: '1')}"
-                  width="238px" height="53px" alt="Musée Granet - Aix-en-Provence"></mj-image>
+                  width="238px" height="53px" alt="{data.tx_mask_image.0.alternative}"></mj-image>
     </mj-column>
 </mj-section>
+<mj-raw>
+    <!-- htmlmin:ignore -->
+</f:section>
+    <!-- htmlmin:ignore -->
+</mj-raw>
+
+<mj-raw>
+    <!-- htmlmin:ignore -->
+<f:section name="noBanner">
+    <!-- htmlmin:ignore -->
+</mj-raw>
+<!-- Branding -->
+<mj-section mj-class="section">
+    <mj-column>
+        <mj-image href="{f:uri.typolink(parameter: data.tx_mask_link, absolute: '1')}"
+                  src="{f:uri.image(image: data.tx_mask_image.0, absolute: '1')}"
+                  width="238px" height="53px" alt="{data.tx_mask_image.0.alternative}"></mj-image>
+    </mj-column>
+</mj-section>
+<mj-raw>
+    <!-- htmlmin:ignore -->
+</f:section>
+    <!-- htmlmin:ignore -->
+</mj-raw>
+
+<mj-raw>
+    <!-- htmlmin:ignore -->
+    <f:if condition="{data.tx_mask_isbanner}">
+        <f:then>
+            <f:render section="banner" arguments="{_all}" />
+        </f:then>
+        <f:else>
+            <f:render section="noBanner" arguments="{_all}" />
+        </f:else>
+    </f:if>
+    <!-- htmlmin:ignore -->
+</mj-raw>
 
 <mj-raw>
 <!-- htmlmin:ignore -->

@@ -13,7 +13,7 @@
   <mj-group>
     <mj-column>
       <mj-raw><!-- htmlmin:ignore --><f:if condition="{data.tx_arcproject_date}"><!-- htmlmin:ignore --></mj-raw>
-        <mj-text mj-class="metas__info">{data.tx_arcproject_date -> f:format.date(format: 'd F Y')}</mj-text>
+        <mj-text mj-class="metas__info">{data.tx_arcproject_date -> f:format.date(format: '%d %B %Y')}</mj-text>
       <mj-raw><!-- htmlmin:ignore --></f:if><!-- htmlmin:ignore --></mj-raw>
     </mj-column>
     <mj-column>
