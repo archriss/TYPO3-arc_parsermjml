@@ -183,6 +183,7 @@ class MjmlController extends ActionController
             $this->folder->getStorage()->getUid(),
             $dto->getStyle()
         );
+        $background = $dto->getBackground() !== '' ? $dto->getBackground() : '#ffffff';
 
         $globalOverride = in_array('--all--', $dto->getOverride());
         foreach ($this->folder->getFiles() as $file) {
@@ -199,7 +200,7 @@ class MjmlController extends ActionController
                     $response = $this->client->post('render', [
                         'auth' => [$this->conf['auth']['appId'], $this->conf['auth']['secretKey']],
                         'body' => \GuzzleHttp\json_encode([
-                            'mjml' => $this->getMjmlFor($file, $styleFile)
+                            'mjml' => $this->getMjmlFor($file, $styleFile, $background)
                         ])
                     ]);
 
@@ -227,9 +228,10 @@ class MjmlController extends ActionController
     /**
      * @param \TYPO3\CMS\Core\Resource\File $templateFile
      * @param \TYPO3\CMS\Core\Resource\File $styleFile
+     * @param string $background
      * @return string
      */
-    protected function getMjmlFor(File $templateFile, File $styleFile)
+    protected function getMjmlFor(File $templateFile, File $styleFile, $background = '#ffffff')
     {
         $subpartIdentifier = $this->getSubpartIdentifier($templateFile->getNameWithoutExtension());
         $templateContent = $templateFile->getContents();
@@ -240,7 +242,7 @@ class MjmlController extends ActionController
         <mj-title>Titre</mj-title>
         $styleContent
     </mj-head>
-    <mj-body>
+    <mj-body background-color="$background">
     <!--$subpartIdentifier begin -->
     $templateContent
     <!--$subpartIdentifier end -->

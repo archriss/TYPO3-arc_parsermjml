@@ -45,6 +45,9 @@
 			<trans-unit id="module.form.styleSelect">
 				<source>Sélectionnez le fichier de style à utiliser</source>
 			</trans-unit>
+			<trans-unit id="module.form.background">
+				<source>Définissez si besoin la couleur de fond :</source>
+			</trans-unit>
 			<trans-unit id="module.form.override">
 				<source>Écraser les fichiers existant :</source>
 			</trans-unit>
