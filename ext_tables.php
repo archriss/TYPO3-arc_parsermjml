@@ -14,7 +14,7 @@ if (!defined('TYPO3_MODE')) {
     ],
     [
         'access' => 'user,group',
-        'icon'   => 'EXT:arc_parsermjml/Resources/Public/Icons/module.svg',
+        'icon'   => 'EXT:arc_parsermjml/Resources/Public/Icons/Extension.svg',
         'labels' => 'LLL:EXT:arc_parsermjml/Resources/Private/Language/locallang_module.xlf',
     ]
 );
