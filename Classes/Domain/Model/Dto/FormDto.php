@@ -11,9 +11,9 @@ class FormDto
     protected $style = '';
 
     /**
-     * @var bool 
+     * @var array
      */
-    protected $override = false;
+    protected $override = [];
 
     /**
      * @return string
@@ -32,17 +32,17 @@ class FormDto
     }
 
     /**
-     * @return bool
+     * @return array
      */
-    public function isOverride(): bool
+    public function getOverride(): array
     {
         return $this->override;
     }
 
     /**
-     * @param bool $override
+     * @param array $override
      */
-    public function setOverride(bool $override): void
+    public function setOverride(array $override): void
     {
         $this->override = $override;
     }

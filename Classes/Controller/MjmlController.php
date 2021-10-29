@@ -12,7 +12,6 @@ use TYPO3\CMS\Core\Resource\ResourceFactory;
 use TYPO3\CMS\Core\Service\MarkerBasedTemplateService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
-use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 use TYPO3\CMS\Extbase\Validation\Validator\GenericObjectValidator;
 
 class MjmlController extends ActionController
@@ -185,14 +184,14 @@ class MjmlController extends ActionController
             $dto->getStyle()
         );
 
-        DebuggerUtility::var_dump($this->folder->getFiles(), $this->folder->getFileCount());
+        $globalOverride = in_array('--all--', $dto->getOverride());
         foreach ($this->folder->getFiles() as $file) {
             $destFilename = $file->getNameWithoutExtension() . '.html';
-            DebuggerUtility::var_dump($destFilename, $file->getIdentifier());
             // Only process for non existing files or if override is set
+            $override = (bool)($globalOverride | in_array($file->getIdentifier(), $dto->getOverride()));
             if (
                 $this->folder->hasFile($destFilename) === false ||
-                ($dto->isOverride() && $this->folder->hasFile($destFilename))
+                ($override && $this->folder->hasFile($destFilename))
             ) {
                 // Handle only common files
                 if ($file->getIdentifier() !== $styleFile->getIdentifier()) {
@@ -206,7 +205,6 @@ class MjmlController extends ActionController
 
                     // Parse response 
                     $data = \GuzzleHttp\json_decode($response->getBody()->getContents(), true);
-                    DebuggerUtility::var_dump($data['errors'], $data === false ? 'null' : 'ok');
                     if (false === $data || count($data['errors'])) {
                         $success = false;
                         $errorDatas[$file->getIdentifier()] = $data['errors'];

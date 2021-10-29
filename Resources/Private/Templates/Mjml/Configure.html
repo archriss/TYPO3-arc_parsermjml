@@ -32,11 +32,24 @@
             </div>
             <div class="row">
                 <div class="form-group">
-                    <label for="overrideCheck">
+                    <label for="override">
                         <f:translate key="module.form.override" />
                     </label>
-                    <div class="input-group">
-                        <f:form.checkbox id="overrideCheck" property="override" value="1" />
+                    <div class="select-group">
+                        <f:form.select
+                                class="form-control t3js-formengine-select-itemstoselect"
+                                id="override"
+                                multiple="1"
+                                options="{files}"
+                                optionLabelField="name"
+                                optionValueField="identifier"
+                                optionsAfterContent="true"
+                                property="override"
+                                size="7"
+                        >
+                            <f:form.select.option value="--all--"><f:translate key="module.form.override.all" /></f:form.select.option>
+                            <f:form.select.optgroup label="{f:translate(key: 'module.form.override.files')}" />
+                        </f:form.select>
                     </div>
                 </div>
             </div>

@@ -46,7 +46,13 @@
 				<source>Sélectionnez le fichier de style à utiliser</source>
 			</trans-unit>
 			<trans-unit id="module.form.override">
-				<source>Écraser les fichiers existant ?</source>
+				<source>Écraser les fichiers existant :</source>
+			</trans-unit>
+			<trans-unit id="module.form.override.all">
+				<source>Tous</source>
+			</trans-unit>
+			<trans-unit id="module.form.override.files">
+				<source>Fichiers spécifiques :</source>
 			</trans-unit>
 			<trans-unit id="module.info.template.title">
 				<source>Attention</source>
